@@ -46,30 +46,30 @@
             <div class="info-about-me">
                 <div class="title-about-me">
                     <p class="my-name">My name is <em>Volodymyr</em>.</p><br>
-                    <p class="short-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo commodi quae quasi ipsum exercitationem doloribus blanditiis enim at neque. Ipsum delectus porro consequuntur! Mollitia vel, laborum suscipit libero ea maxime.</p>
+                    <p class="short-info" id="short-description">Text of description</p>
                 </div>
                 <div class="details-about-me">
-                    <div class="my-description">
+                    <div class="my-description" id="my-description">
                         <ul>
-                            <li><span>Age: </span>19</li>
-                            <li><span>Gender: </span>Male</li>
-                            <li><span>Language: </span>Ukrainian, English</li>
-                            <li><span>Work: </span>.NET/TypeScript Full-Stack developer</li>
-                            <li><span>Status: </span>Free-to-work</li>
+                            <li id="age"><span>Age: </span></li>
+                            <li id="gender"><span>Gender: </span></li>
+                            <li id="language"><span>Language: </span></li>
+                            <li id="work"><span>Work: </span></li>
+                            <li id="status"><span>Status: </span></li>
                         </ul>
                         <button>Donwload CV</button>
                     </div>
                     <div class="work-statistics">
                         <div class="projects-statistic">
-                            <p class="count">10+</p>
+                            <p class="count" id="completed-projects-count">10+</p>
                             <p class="title">Projects Completed</p>
                         </div>
                         <div class="science-statistic">
-                            <p class="count">20+</p>
+                            <p class="count" id="publications-count">20+</p>
                             <p class="title">Count Of Publications</p>
                         </div>
                         <div class="years-statistic">
-                            <p class="count">4+</p>
+                            <p class="count" id="experience-years">4+</p>
                             <p class="title">Years Of Experience</p>
                         </div>
                     </div>
@@ -238,5 +238,6 @@
         <p>Created By <strong>Volodymyr Shapoval</strong> | All Rights Reserved</p>
     </footer> -->
     <script type="module"  src="js/script.js"></script>
+    <script src="js/InfoPresenter/showUserInfo.js"></script>
 </body>
 </html>
