@@ -1,15 +1,8 @@
-import {typeWritterEffect} from './TextAnimations/typeWritter.js';
+import {typeWritterEffectHandler} from './EventHandlers/typeWritterHandlers.js';
+import { showUserInfo } from './InfoPresenters/showUserInfo.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    let nameTitleElement = document.getElementById('name-title');
-    let devTitleElement = document.getElementById('developer-title');
-    devTitleElement.style.opacity = 0;
-    let speed = 150; // Швидкість виведення літер
-
-    typeWritterEffect(nameTitleElement, speed);
-    setTimeout(() => {
-        devTitleElement.style.opacity = 1;
-        typeWritterEffect(devTitleElement, speed)
-    }, 3000);
+    typeWritterEffectHandler();
+    showUserInfo();
 })
 
