@@ -1,8 +1,10 @@
-import {typeWritterEffectHandler} from './EventHandlers/typeWritterHandlers.js';
-import { showUserInfo } from './InfoPresenters/showUserInfo.js';
+import { addProjectHandlerAsync } from './EventHandlers/addProjectHandler.js';
+import { showUserInfoHandler } from './EventHandlers/showUserInfoHandler.js';
+import { typeWritterEffectHandler } from './EventHandlers/typeWritterHandlers.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     typeWritterEffectHandler();
-    showUserInfo();
+    showUserInfoHandler();
+    addProjectHandlerAsync();
 })
 

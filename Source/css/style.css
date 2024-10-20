@@ -292,9 +292,12 @@ body {
   flex-direction: column;
   width: 80vw;
   min-height: 60vh;
+  max-height: 60vh;
   align-items: center;
   justify-content: flex-start;
   text-align: center;
+  overflow: scroll;
+  border-radius: 15px;
 }
 .my-projects-page .projects table {
   min-width: 100%;
@@ -302,7 +305,14 @@ body {
 }
 .my-projects-page .projects table td, .my-projects-page .projects table th {
   border: 1px solid #fff;
-  border-radius: 15px;
+  border-radius: 10px;
+}
+.my-projects-page .projects table thead {
+  position: sticky; /* Залишається на місці при прокручуванні */
+  top: 0; /* Прив'язується до верхньої частини контейнера */
+  background-color: #222; /* Задайте фон для заголовка */
+  z-index: 1; /* Переконайтеся, що заголовок зверху */
+  backdrop-filter: blur(100px); /* Розмиття заднього фону */
 }
 .my-projects-page .projects table thead tr th {
   height: 5vh;
@@ -320,9 +330,6 @@ body {
 }
 .my-projects-page .projects table tbody .checked {
   color: orange;
-}
-.my-projects-page .projects table tfoot tr th {
-  height: 4vh;
 }
 
 .my-blog-page {

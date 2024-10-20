@@ -1,18 +1,4 @@
-// Info about user for "About" page
-const userInfo = {
-    firstName: 'Volodymyr',
-    age: 19,
-    gender: 'Male',
-    language: ['Ukrainian', 'English'],
-    work: '.NET/TypeScript Full-Stack developer',
-    status: 'Free-to-work',
-    completed_projects_count: 10,
-    publications_count: 20,
-    experience_years: 4,
-    short_description: 'I am an ambitious full-stack developer with a passion for continuous improvement and learning new technologies. I have experience in building efficient web applications, both on the client and server sides, with a focus on clean code and user-friendly interfaces.'
-}
-
-export function showUserInfo(){
+export function showUserInfo(userInfo){
     document.getElementById("age").innerHTML = `<span>Age: </span>${userInfo.age}`;
     document.getElementById("gender").innerHTML = `<span>Gender: </span>${userInfo.gender}`;
     document.getElementById("language").innerHTML = `<span>Language: </span>${userInfo.language}`;

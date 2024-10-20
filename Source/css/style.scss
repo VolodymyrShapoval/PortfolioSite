@@ -280,9 +280,12 @@ body{
         flex-direction: column;
         width: 80vw;
         min-height: 60vh;
+        max-height: 60vh;
         align-items: center;
         justify-content: flex-start;
         text-align: center;
+        overflow: scroll;
+        border-radius: 15px;
 
         table{
             min-width: 100%;
@@ -290,9 +293,15 @@ body{
 
             td, th{
                 border: 1px solid #fff;
-                border-radius: 15px;
+                border-radius: 10px;
             }
             thead{
+                position: sticky; /* Залишається на місці при прокручуванні */
+                top: 0; /* Прив'язується до верхньої частини контейнера */
+                background-color: #222; /* Задайте фон для заголовка */
+                z-index: 1; /* Переконайтеся, що заголовок зверху */
+                backdrop-filter: blur(100px); /* Розмиття заднього фону */;
+
                 tr{
                     th{
                         height: 5vh;
@@ -301,7 +310,7 @@ body{
                 }
             }
             tbody{
-                background-color: #222222;
+                background-color: #222222;                
                 tr{
                     td{
                         height: 3vh;
@@ -314,13 +323,6 @@ body{
                 }
                 .checked {
                     color: orange;
-                }
-            }
-            tfoot{
-                tr{
-                    th{
-                        height: 4vh;
-                    }
                 }
             }
         }
