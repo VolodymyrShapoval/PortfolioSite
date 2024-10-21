@@ -1,5 +1,5 @@
 export class Project {
-    constructor(title, date, rate, country, about, inProcess = false) {
+    constructor(title, date, rate, country, about) {
         this.title = title;
         this.date = date;
         this.rate = rate;
@@ -8,7 +8,7 @@ export class Project {
     }
 
     getValues() {
-        return this.title, this.date, this.rate, this.country, this.about, this.inProcess;
+        return this.title, this.date, this.rate, this.country, this.about;
     }
 
     getStars() {

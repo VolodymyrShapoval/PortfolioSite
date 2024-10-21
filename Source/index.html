@@ -79,6 +79,14 @@
 
         <section class="my-projects-page" id="my-projects-page">
             <h2 class="section-title"><strong>My projects</strong></h2>
+            <div class="sorting_selector">
+                <!-- Випадаючий список для сортування -->
+                <select id="sort-options" onchange="sortByOption()">
+                    <option value="" disabled selected>Sort by:</option>
+                    <option value="date">Date</option>
+                    <option value="rate">Rate</option>
+                </select>
+            </div>
             <div class="projects">
                 <table id="projects_table">
                     <thead>
@@ -87,8 +95,8 @@
                             <th colspan="4">Info</th>
                         </tr>
                         <tr>
-                            <th>Date</th>
-                            <th>Rate</th>
+                            <th data-type="date">Date</th>
+                            <th data-type="number">Rate</th>
                             <th>Country</th>
                             <th>About</th>
                         </tr>
@@ -102,28 +110,8 @@
 
         <section class="my-blog-page" id="my-blog-page">
             <h2 class="section-title"><strong>My blog</strong></h2>
-            <div class="articles">
-                <div class="article-block" style="display: flex;">
-                    <img width="200px" src="img/pexels-pixabay-262508.jpg" alt="photo-for-article-1">
-                    <article>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, dolor voluptatem illo itaque, quas at ea earum soluta quidem, illum enim dolore vitae rem suscipit ratione officiis laborum esse atque.</p>
-                        <span class="date">24/02/2022</span>
-                    </article>
-                </div>
-                <div class="article-block" style="display: flex;">
-                    <img width="200px" src="img/toy-bricks-table-with-word-blog_144627-47465.jpg.avif" alt="photo-for-article-2">
-                    <article>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit cumque nemo, necessitatibus soluta iste eligendi illo ab? Porro dolores atque, velit quas maiores, iusto nisi alias corporis nulla excepturi reprehenderit?</p>
-                        <span class="date">15/04/2022</span>
-                    </article>
-                </div>
-                <div class="article-block" style="display: flex;">
-                    <img width="200px" src="img/blog.jpg" alt="photo-for-article-3">
-                    <article>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab illo quam libero atque nam voluptatem ullam! Neque aspernatur reprehenderit accusamus, officiis doloremque, quae dicta eaque doloribus aliquid rerum, est esse!</p>
-                        <span class="date">17/05/2022</span>
-                    </article>
-                </div>
+            <div class="articles" id="articles">
+                <!-- Articles -->
             </div>
         </section>
 
