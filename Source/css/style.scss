@@ -379,6 +379,11 @@ body{
                 position: relative; /* Для правильного позиціонування */
                 overflow: hidden;
                 
+                .hiddenBtn{
+                    color: #800080;
+                    font-weight: 600;
+                }
+
                 h2{
                     font-size: 26px;
                     text-align: center;
@@ -417,7 +422,7 @@ body{
     align-items: start;
 
 
-    .contact-form {
+    .contact-form-block {
         display: flex;
         flex-direction: column;
         width: 100%;

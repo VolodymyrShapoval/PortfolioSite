@@ -379,6 +379,10 @@ body {
   position: relative; /* Для правильного позиціонування */
   overflow: hidden;
 }
+.my-blog-page .articles .article-block article .hiddenBtn {
+  color: #800080;
+  font-weight: 600;
+}
 .my-blog-page .articles .article-block article h2 {
   font-size: 26px;
   text-align: center;
@@ -412,14 +416,14 @@ body {
   padding: 10%;
   align-items: start;
 }
-.contact-me-page .contact-form {
+.contact-me-page .contact-form-block {
   display: flex;
   flex-direction: column;
   width: 100%;
   min-height: 60vh;
   gap: 10px;
 }
-.contact-me-page .contact-form form {
+.contact-me-page .contact-form-block form {
   border: 1px solid #fff;
   border-radius: 15px;
   padding: 5%;
@@ -427,36 +431,36 @@ body {
   flex-direction: column;
   gap: 5px;
 }
-.contact-me-page .contact-form form input, .contact-me-page .contact-form form textarea {
+.contact-me-page .contact-form-block form input, .contact-me-page .contact-form-block form textarea {
   border-radius: 15px;
   height: 5vh;
   width: 40%;
   padding: 10px;
 }
-.contact-me-page .contact-form form textarea {
+.contact-me-page .contact-form-block form textarea {
   width: 75%;
   height: 10vh;
 }
-.contact-me-page .contact-form form .checking {
+.contact-me-page .contact-form-block form .checking {
   display: flex;
   width: 75%;
   margin: 1% 0;
 }
-.contact-me-page .contact-form form .checking p {
+.contact-me-page .contact-form-block form .checking p {
   width: 90%;
 }
-.contact-me-page .contact-form form .checking input {
+.contact-me-page .contact-form-block form .checking input {
   width: 10%;
   height: 2vh;
 }
-.contact-me-page .contact-form form button {
+.contact-me-page .contact-form-block form button {
   border-radius: 15px;
   height: 5vh;
   width: 75%;
   background-color: #fff;
   color: #000;
 }
-.contact-me-page .contact-form form button:hover {
+.contact-me-page .contact-form-block form button:hover {
   background-color: #000;
   color: #fff;
   border: 1px solid #fff;

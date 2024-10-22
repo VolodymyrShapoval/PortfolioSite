@@ -13,6 +13,7 @@
     <title>Laboratry work #1</title>
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <header class="header">
@@ -117,13 +118,13 @@
 
         <section class="contact-me-page" id="contact-me-page">
             <h2 class="section-title"><strong>Contact me</strong></h2>
-            <div class="contact-form">
-                <form>
-                    <input type="text" placeholder="Name: " required>
-                    <input type="email" placeholder="Email: " required>
-                    <textarea type="text" rows="5" cols="40" placeholder="Your question: "></textarea>
+            <div class="contact-form-block">
+                <form id="contact-form">
+                    <input id="name" type="text" placeholder="Name: " required>
+                    <input id="email" type="email" placeholder="Email: " required>
+                    <textarea id="comment" type="text" rows="5" cols="40" placeholder="Your question: "></textarea>
                     <div class="checking">
-                        <input type="checkbox">
+                        <input id="consent" type="checkbox">
                         <p>I give my consent to data processing</p>
                     </div>
                     <button type="submit">Send Message</button>
@@ -151,5 +152,6 @@
         <p>Created By <strong>Volodymyr Shapoval</strong> | All Rights Reserved</p>
     </footer> -->
     <script type="module" src="js/script.js"></script>
+    <script src="js/server.js"></script>
 </body>
 </html>
