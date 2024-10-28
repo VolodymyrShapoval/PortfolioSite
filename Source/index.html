@@ -4,6 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -111,8 +112,15 @@
 
         <section class="my-blog-page" id="my-blog-page">
             <h2 class="section-title"><strong>My blog</strong></h2>
-            <div class="articles" id="articles">
-                <!-- Articles -->
+            <div class="slider swiper">
+                <div class="card-wrapper">
+                    <div class="articles swiper-wrapper" id="articles"> <!-- Card-list -->
+                        <!-- Articles -->
+                    </div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </section>
 
@@ -151,7 +159,10 @@
     <!-- <footer style="border: 2px solid black;">
         <p>Created By <strong>Volodymyr Shapoval</strong> | All Rights Reserved</p>
     </footer> -->
+
     <script type="module" src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.0/swiper-bundle.min.js"></script>
+    <script src="swiper.js"></script>
     <script src="js/server.js"></script>
 </body>
 </html>

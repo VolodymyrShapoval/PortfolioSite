@@ -1,7 +1,7 @@
 export function addNoteToSlider(article) {
     // Створюємо контейнер для статті
     const articleBlock = document.createElement('div');
-    articleBlock.className = 'article-block';
+    articleBlock.className = 'article-block swiper-slide';
 
     // Додаємо зображення
     const imgElement = document.createElement('img');
