@@ -81,13 +81,19 @@
 
         <section class="my-projects-page" id="my-projects-page">
             <h2 class="section-title"><strong>My projects</strong></h2>
-            <div class="sorting_selector">
-                <!-- Випадаючий список для сортування -->
-                <select id="sort-options" onchange="sortByOption()">
-                    <option value="" disabled selected>Sort by:</option>
-                    <option value="date">Date</option>
-                    <option value="rate">Rate</option>
-                </select>
+            <div class="options-block">
+                <div class="sorting-selector">
+                    <!-- Випадаючий список для сортування -->
+                    <select id="sort-options" onchange="sortByOption()">
+                        <option value="" disabled selected>Sort by:</option>
+                        <option value="date">Date</option>
+                        <option value="rate">Rate</option>
+                    </select>
+                </div>
+                <div class="searching-input">
+                    <input id="search-project-field" placeholder="Search:">
+                    <button id="search-btn">Search</button>
+                </div>
             </div>
             <div class="projects">
                 <table id="projects_table">
@@ -126,37 +132,45 @@
 
         <section class="contact-me-page" id="contact-me-page">
             <h2 class="section-title"><strong>Contact me</strong></h2>
-            <div class="contact-form-block">
-                <form id="contact-form">
-                    <input id="name" type="text" placeholder="Name: " required>
-                    <input id="email" type="email" placeholder="Email: " required>
-                    <textarea id="comment" type="text" rows="5" cols="40" placeholder="Your question: "></textarea>
-                    <div class="checking">
-                        <input id="consent" type="checkbox">
-                        <p>I give my consent to data processing</p>
+            <div class="contact-section">
+                <div class="contact-form-block">
+                    <form id="contact-form">
+                        <input id="name" type="text" placeholder="Name: " required>
+                        <input id="email" type="email" placeholder="Email: " required>
+                        <input id="comment" type="text" placeholder="Your question: "></textarea>
+                        <a class="details-btn" href="#" id="advanced-settings-btn">Show advanced settings:</a>
+                        <div class="additional-info-container" id="additional-info-container">
+                            <textarea id="details" type="text" rows="5" cols="40" placeholder="Details: "></textarea>
+                        </div>
+                        <div class="checking">
+                            <input id="consent" type="checkbox">
+                            <p>I give my consent to data processing</p>
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+                <aside class="recomendations">
+                    <div class="recomended-user">
+                        <a><img src="https://i.pinimg.com/474x/09/c7/a8/09c7a880269df8624f88418fbca07c55.jpg"></a>
+                        <h3>Vitaliy Hriss</h3>
                     </div>
-                    <button type="submit">Send Message</button>
-                </form>
+                    <div class="recomended-user">
+                        <a><img src="https://media.themoviedb.org/t/p/w500/82HGQmCKnvtGllKfomZ0TuOQEFp.jpg"></a>
+                        <h3>Viktor Komissarov</h3>
+                    </div>
+                    <div class="recomended-user">
+                        <a><img src="https://cdn.britannica.com/96/173696-050-7070A29D/Benedict-Cumberbatch-British-stage-screen.jpg"></a>
+                        <h3>Oleh Sumaka</h3>
+                    </div>
+                    <div class="recomended-user">
+                        <a><img src="https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/256e3021-b4bc-43cb-9d8c-0790d7bbc67c/220x330"></a>
+                        <h3>Yevhen Nevgad</h3>
+                    </div>
+                </aside>
             </div>
-            <aside>
-                <a><img src="#"></a>
-                Vitaliy Hriss
-            </aside>
-            <aside>
-                <a><img src="#"></a>
-                Viktor Komissarov
-            </aside>
-            <aside>
-                <a><img src="#"></a>
-                Oleh Sumaka
-            </aside>
-            <aside>
-                <a><img src="#"></a>
-                Yevhen Nevgad
-            </aside>
         </section>
     </main>
-    <!-- <footer style="border: 2px solid black;">
+    <!-- <footer>
         <p>Created By <strong>Volodymyr Shapoval</strong> | All Rights Reserved</p>
     </footer> -->
 

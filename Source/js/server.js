@@ -24,7 +24,8 @@ app.post("/api/submit", (req, res) => {
             const formData = {
                 name: req.body.name,
                 email: req.body.email,
-                question: req.body.question
+                question: req.body.question,
+                details: req.body.details
             };
 
             const jsonData = JSON.stringify(formData, null, 2);

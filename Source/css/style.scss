@@ -275,21 +275,73 @@ body{
     justify-content: center;
     align-content: center;
 
-    .sorting_selector{
+    .options-block{
         display: flex;
-        flex-direction: column;
-        width: 10%;
-        align-items: left;
-        justify-content: flex-start;
-        text-align: center;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1em;
 
-        select{
-            font-size: 20px;
-            background: #000;
-            color: #fff;
+        .sorting-selector{
+            display: flex;
+            flex-direction: column;
+            width: 10%;
+            align-items: flex-start;
+            justify-content: center;
+            text-align: center;
+
+            select{
+                font-size: 20px;
+                background: #000;
+                color: #fff;
+                border: 2px solid #555;
+                border-radius: 8px;
+                padding: 8px 12px;
+            }
+        }
+
+        .searching-input{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: center;
+            text-align: center;
+
+            input{
+                font-size: 20px;
+                background: #000;
+                color: #fff;
+                border: 2px solid #555;
+                border-radius: 8px;
+                padding: 8px 12px;
+                outline: none;
+                transition: border-color 0.3s, box-shadow 0.3s;
+
+                &:focus{
+                    border-color: #ffffff;
+                }
+            }
+
+            button{
+                font-size: 20px;
+                background: #000;
+                color: #fff;
+                border: 2px solid #555;
+                border-radius: 8px;
+                margin-left: .25em;
+                padding: 8px 12px;
+                outline: none;
+                transition: border-color 0.3s, box-shadow 0.3s;
+
+                &:hover{
+                    border-color: #000;
+                    color: #000;
+                    background: #fff;
+                }
+            }
         }
     }
-
+      
     .projects{
         display: flex;
         flex-direction: column;
@@ -342,6 +394,7 @@ body{
             }
         }
     }
+    
 }
 
 .my-blog-page {
@@ -420,77 +473,124 @@ body{
 }
 
 .contact-me-page {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    padding: 10%;
-    align-items: start;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10%;
+    justify-content: center;
+    align-content: center;
 
+    .contact-section{
+        display: grid;
+        grid-template-areas: "recomendations form";
+        gap: 5em;
 
-    .contact-form-block {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        min-height: 60vh;
-        gap: 10px;
-
-        form {
-            border: 1px solid #fff;
-            border-radius: 15px;
-            padding: 5%;
+        .contact-form-block {
+            grid-area: form;
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            min-height: 60vh;
 
-            input, textarea {
-                border-radius: 15px;
-                height: 5vh;
-                width: 40%;
-                padding: 10px;
-            }
-
-            textarea{
-                width: 75%;
-                height: 10vh;
-            }
-
-            .checking{
+            form {
                 display: flex;
-                width: 75%;
-                margin: 1% 0;
-                p{
-                    width: 90%;
-                }
-                input{
-                    width: 10%;
-                    height: 2vh;
-                }
-            }
-            button {
+                flex-direction: column;
+                justify-content: center;
+                gap: 1em;
+                border: 1px solid #fff;
                 border-radius: 15px;
-                height: 5vh;
-                width: 75%;
-                background-color: #fff;
-                color: #000;
+                padding: 5%;            
 
-                &:hover {
-                    background-color: #000;
-                    color: #fff;
-                    border: 1px solid #fff;
+                .details-btn {
+                    font-size: 16px;
+                    color: #ffffff;
+                    text-decoration: none;
+                    transition: color 0.3s;
+
+                    &:hover{
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                }
+
+                .additional-info-container{
+                    display: none;
+                }
+
+                input, textarea {
+                    border-radius: 15px;
+                    height: 5vh;
+                    width: 75%;
+                    padding: 10px;
+                }
+
+                textarea{
+                    width: 75%;
+                    height: 10vh;
+                }
+
+                .checking{
+                    display: flex;
+                    width: 75%;
+                    margin: 1% 0;
+                    p{
+                        width: 90%;
+                    }
+                    input{
+                        width: 10%;
+                        height: 2vh;
+                    }
+                }
+                button {
+                    border-radius: 15px;
+                    height: 5vh;
+                    width: 75%;
+                    background-color: #fff;
+                    color: #000;
+
+                    &:hover {
+                        background-color: #000;
+                        color: #fff;
+                        border: 1px solid #fff;
+                    }
                 }
             }
         }
-    }
 
-    aside {
-        display: flex;
-        align-items: center;
-        margin-top: 10px;
-        
-        a {
-            border: 1px solid #fff;
-            border-radius: 90px;
-            margin: 10px;
+        .recomendations {
+            grid-area: recomendations;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            margin-top: 10px;
+            
+            .recomended-user{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 1em;
+                    border: 2px solid #fff;
+                    border-radius: 90px;
+                    width: 10rem;
+                    height: 10rem;
+                    overflow: hidden;
+                    
+                    img {
+                        width: 100%;
+                        height: auto;
+                        border-radius: 90%; 
+                        object-fit: cover;
+                    }
+                }
+
+                h3{
+                    font-size: 24px;
+                    font-weight: 600;
+                }
+            }
         }
     }
 }

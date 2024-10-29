@@ -3,6 +3,7 @@ export function contactMeFormHandler(){
         name:  document.getElementById("name").value,
         email: document.getElementById("email").value,
         question: document.getElementById("comment").value,
+        details: document.getElementById("details").value,
         consent: document.getElementById("consent").checked
     };
 

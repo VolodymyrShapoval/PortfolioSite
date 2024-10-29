@@ -1,6 +1,5 @@
 export function addProjectInfoToTable(project){
     const tbody = document.querySelector("#projects_table tbody");
-    
     // Створюємо новий рядок
     const tr = document.createElement("tr");
 
